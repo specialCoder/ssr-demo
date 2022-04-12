@@ -1,0 +1,32 @@
+{
+  "name": "ssr-demo",
+  "version": "1.0.0",
+  "description": "ssr项目实践",
+  "main": "index.js",
+  "scripts": {
+    "client:build": "esbuild src/client/index.tsx --bundle --outfile=built/app.js",
+    "server:build": "esbuild src/server/server.tsx --bundle --outfile=built/server.js --platform=node",
+    "start": "node built/server.js",
+    "ssr-client:build": "esbuild ssr/client/index.tsx --bundle --outfile=ssr-built/app.js",
+    "ssr-server:build": "esbuild ssr/server/server.tsx --bundle --outfile=ssr-built/server.js --platform=node",
+    "ssr-start": "node ssr-built/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/specialCoder/ssr-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/specialCoder/ssr-demo/issues"
+  },
+  "homepage": "https://github.com/specialCoder/ssr-demo#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.35"
+  }
+}
