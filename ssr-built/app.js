@@ -22427,6 +22427,7 @@
   });
 
   // ssr/client/index.tsx
+  var import_react2 = __toESM(require_react());
   var import_react_dom = __toESM(require_react_dom());
 
   // ssr/client/App.tsx
@@ -22440,7 +22441,7 @@
   };
 
   // ssr/client/index.tsx
-  import_react_dom.default.hydrate(/* @__PURE__ */ React.createElement(App, null), document.getElementById("root"));
+  import_react_dom.default.hydrate(/* @__PURE__ */ import_react2.default.createElement(App, null), document.getElementById("root"));
 })();
 /**
  * @license React
